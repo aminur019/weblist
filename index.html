@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+		.header {
+			text-align: center;
+			padding: 50px 0;
+			/* background-color: #007bff; */
+			color: #000000;
+		}
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            gap: 10px; /* Adds gap between flex items */
+        }
+
+        .gallery li {
+            position: relative;
+            width: 32.33%;
+            box-sizing: border-box;
+            overflow: hidden;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 992px) {
+            .gallery li {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .gallery li {
+                width: 100%;
+            }
+        }
+
+        .gallery img {
+            width: 100%;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery li:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery div {
+            padding: 0px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-100%);
+            transition: transform 0.5s ease, opacity 0.3s ease, visibility 0s ease 0.5s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .gallery li:hover div {
+            top: 0;
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            transition: transform 0.5s ease, opacity 0.3s ease;
+        }
+
+        .gallery h1 {
+            font-size: 1.8rem;
+            margin: 10px 0;
+            color: #fff;
+        }
+
+        .gallery p {
+            font-size: 0.9rem;
+            margin: 0;
+            color: #fff;
+            padding: 10px 10px;
+        }
+
+		.gallery button {
+			background-color: #F9B707;
+			color: #0a0a0a;
+			border: none;
+			padding: 8px 16px;
+			border-radius: 8px;
+			font-size: 0.8rem;
+			cursor: pointer;
+			transition: background-color 0.5s ease, transform 0.3s ease, opacity 0.5s ease;
+			margin-top: 12px;
+			text-transform: capitalize;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			opacity: 0;
+			visibility: hidden;
+			transform: translateX(100%);
+			transition-delay: 0.3s;
+		}
+
+        .gallery li:hover button {
+            opacity: 1; /* Show the button when hovering */
+            visibility: visible; /* Make the button visible */
+            transform: translateX(0); /* Move to default position */
+            transition-delay: 0.5s; /* Button appears with delay */
+        }
+
+        .footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5rem;
+            text-decoration: none;
+        }
+
+        .social-icons a:hover {
+            color: #007bff;
+        }
+
+        .footer p {
+            margin: 10px 0;
+            font-size: 0.9rem;
+	
+        }
+		.social-icons a img {
+			width: 26px;
+			/* margin-top: 7px; */
+}
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <h1>Welcome to My Portfolio</h1>
+    <p>Explore my projects and get in touch!</p>
+</div>
+
+<ul class="gallery" style="padding:10px 10%">
+   <li>
+    <img src="Screenshort/RecoveredInsurance.png" alt="Recovered Insurance">
+    <div>
+        <h1>Recovered Insurance</h1>
+        <p>A reliable platform designed to streamline the insurance recovery process with user-friendly features.</p>
+        <a href="https://aminur019.github.io/RecoveredInsurance/" target="_blank"><button>Visit Now</button></a>
+    </div>
+</li>
+<li>
+    <img src="Screenshort/portfolio.png" alt="Portfolio">
+    <div>
+        <h1>Portfolio</h1>
+        <p>A collection of various web design and development projects showcasing versatility and creativity.</p>
+        <a href="https://aminur019.github.io/portfolio/" target="_blank"><button>Visit Now</button></a>
+    </div>
+</li>
+<li>
+    <img src="Screenshort/Modern-Classic.png" alt="Modern Classic">
+    <div>
+        <h1>Modern Classic</h1>
+        <p>A sleek and stylish design blending modern aesthetics with classic elegance for a timeless experience.</p>
+        <a href="https://aminur019.github.io/Modern-Classic/" target="_blank"><button>Visit Now</button></a>
+    </div>
+</li>
+<li>
+    <img src="Screenshort/Construction-01.png" alt="Construction 01">
+    <div>
+        <h1>Construction 01</h1>
+        <p>Tailored for the construction industry, this project focuses on showcasing building designs and services.</p>
+        <a href="https://aminur019.github.io/Construction-01/" target="_blank"><button>Visit Now</button></a>
+    </div>
+</li>
+<li>
+    <img src="Screenshort/Construction-02.png" alt="Construction 02">
+    <div>
+        <h1>Construction 02</h1>
+        <p>Another innovative approach to construction, focusing on modern infrastructure and project management.</p>
+        <a href="https://aminur019.github.io/construction02/" target="_blank"><button>Visit Now</button></a>
+    </div>
+</li>
+<li>
+    <img src="Screenshort/property-company.png" alt="Property Company">
+    <div>
+        <h1>Property Company</h1>
+        <p>A professional platform for property sales, rentals, and investment opportunities in the real estate market.</p>
+        <a href="https://aminur019.github.io/property-company/" target="_blank"><button>Visit Now</button></a>
+    </div>
+</li>
+<li>
+    <img src="Screenshort/Minimalist-Landing.png" alt="Minimalist Landing">
+    <div>
+        <h1>Minimalist Landing</h1>
+        <p>A simple, clean landing page design with a focus on elegance and straightforward user experience.</p>
+        <a href="https://aminur019.github.io/Minimalist-Landing/" target="_blank"><button>Visit Now</button></a>
+    </div>
+</li>
+<li>
+    <img src="Screenshort/Wallcovering.png" alt="Wallcovering">
+    <div>
+        <h1>Wallcovering</h1>
+        <p>Showcasing a range of decorative wall coverings with a modern and stylish touch for interior design enthusiasts.</p>
+        <a href="https://aminur019.github.io/Wallcovering/" target="_blank"><button>Visit Now</button></a>
+    </div>
+</li>
+<li>
+    <img src="Screenshort/Travel-BDTore.png" alt="Travel BD Tour">
+    <div>
+        <h1>Travel BD Tour</h1>
+        <p>Your go-to destination for exploring the best travel packages, tips, and destinations in Bangladesh.</p>
+        <a href="https://aminur019.github.io/Travel-BDTore/" target="_blank"><button>Visit Now</button></a>
+    </div>
+</li>
+<li>
+    <img src="Screenshort/kimboliving.png" alt="Kimbo Living">
+    <div>
+        <h1>Kimbo Living</h1>
+        <p>Discover a lifestyle brand offering modern furniture and home decor for contemporary living spaces.</p>
+        <a href="https://aminur019.github.io/kimboliving/" target="_blank"><button>Visit Now</button></a>
+    </div>
+</li>
+<li>
+    <img src="Screenshort/Jisha-.png" alt="Jisha">
+    <div>
+        <h1>Jisha</h1>
+        <p>An innovative platform for women’s fashion, featuring the latest trends and styles for every occasion.</p>
+        <a href="https://aminur019.github.io/Jisha-/" target="_blank"><button>Visit Now</button></a>
+    </div>
+</li>
+<li>
+    <img src="Screenshort/zentec.png" alt="Zentec">
+    <div>
+        <h1>Zentec</h1>
+        <p>A technology-driven company offering solutions in automation, software development, and system integration.</p>
+        <a href="https://aminur019.github.io/zentec/" target="_blank"><button>Visit Now</button></a>
+    </div>
+</li>
+<li>
+    <img src="Screenshort/TrakerEnergyService.png" alt="Tracker Energy Service">
+    <div>
+        <h1>Tracker Energy Service</h1>
+        <p>Empowering sustainable energy solutions with cutting-edge technology for tracking and optimizing energy use.</p>
+        <a href="https://aminur019.github.io/TrakerEnergyService/" target="_blank"><button>Visit Now</button></a>
+    </div>
+</li>
+<li>
+    <img src="Screenshort/Leonardi.png" alt="Leonardi">
+    <div>
+        <h1>Leonardi</h1>
+        <p>A luxury brand offering exquisite handcrafted products with a focus on Italian craftsmanship and design.</p>
+        <a href="https://aminur019.github.io/Leonardi/" target="_blank"><button>Visit Now</button></a>
+    </div>
+</li>
+<li>
+    <img src="Screenshort/TheRiceBazar.png" alt="The Rice Bazar">
+    <div>
+        <h1>The Rice Bazar</h1>
+        <p>Bringing the finest rice varieties and traditional food products from across the region to your doorstep.</p>
+        <a href="https://aminur019.github.io/TheRiceBazar/" target="_blank"><button>Visit Now</button></a>
+    </div>
+</li>
+<li>
+    <img src="Screenshort/Hotel02.png" alt="Hotel 03">
+    <div>
+        <h1>Hotel 03</h1>
+        <p>A modern hotel offering exceptional amenities, prime locations, and a premium hospitality experience.</p>
+        <a href="https://aminur019.github.io/Hotel03/" target="_blank"><button>Visit Now</button></a>
+    </div>
+</li>
+
+</ul>
+
+<div class="footer">
+    <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    <div class="social-icons">
+        <a href="https://www.facebook.com/iskhan019" target="_blank"><i class="fab fa-facebook-f"></i></a>
+		<a href="https://wa.me/+8801942944988" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://www.linkedin.com/in/iskhan019/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+</div>
+
+</body>
+</html>
